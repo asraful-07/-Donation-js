@@ -17,10 +17,8 @@ document.getElementById('donate-now').addEventListener('click', function() {
 
     const newBalance = accountBalance - donationInput;
     const newDonationTotal = currentDonation + donationInput;
-
     document.getElementById('account-balance').textContent = newBalance.toFixed(2);
     document.getElementById('current-donation').innerText = newDonationTotal.toFixed(2);
-
 
     // History add
     const now = new Date(); 
@@ -44,15 +42,14 @@ document.getElementById('donate-now').addEventListener('click', function() {
     historyList.className =
     "bg-white shadow-xl rounded border-2 p-6 mb-6";
     historyList.innerHTML = `
-    <h3 class="text-xl font-bold my-4">${donationInput} Taka is Donated for famine-2024 at Feni, Banglades</h3>
+    <h3 class="text-xl font-bold my-4">${donationInput} Taka is Donated for famine-2024 at Noakhali, Banglades</h3>
     <p class="text-lg text-black">Date: ${formattedDate} ${formattedTime} (Bangladesh Standard Time)</p>
    
     `
     document.getElementById('history-list').appendChild(historyList);
 });
 
-
-// History tab 
+// donation to History tab
 const showHistory = document.getElementById("show-history");
 const showDonation = document.getElementById("show-donation");
 
