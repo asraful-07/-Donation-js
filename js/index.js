@@ -1,12 +1,3 @@
-//get value function
-function getInputValueById(id) {
-    return parseFloat(document.getElementById(id).value);
-}
-
-function getElementTextById(id){
-    return parseFloat(document.getElementById(id).innerText);
-}
-
 document.getElementById('donate-now').addEventListener('click', function() {
     const accountBalance = getElementTextById('account-balance');
     const donationInput = getInputValueById('donation-input');
