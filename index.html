@@ -16,13 +16,14 @@
   </head>
   <body>
     <!-- header section cond -->
-    <header class="bg-[#f9f7f3] pt-6">
+    <header class="sticky top-0 z-50">
+     <div class="bg-[#f9f7f3] pt-6">
       <div class="container mx-auto pb-12">
         <div class="flex justify-between items-center">
           <button
             class="bg-[#b4f461] text-xl text-black font-bold rounded py-2 px-6"
           >
-            Blog
+          <a href="Home.html" class="font-bold text-lg">Blog</a>
           </button>
           <div class="flex items-center gap-3">
             <img src="./assets/logo.png" alt="" />
@@ -30,41 +31,42 @@
           </div>
           <div class="flex items-center gap-3">
             <img src="./assets/coin.png" alt="" />
-            <span class="font-bold text-xl text-[#565654]">5500 BDT</span>
+            <span id="account-balance" class="font-bold text-xl text-[#565654]">5500.00 BDT</span>
           </div>
         </div>
       </div>
+     </div>
+      <!-- button section code -->
+     <div class="flex justify-center gap-4 my-10">
+      <div>
+        <button id="show-donation"
+          class="bg-[#b4f461] text-xl text-black font-bold rounded py-2 px-4"
+        >
+          Donation
+        </button>
+      </div>
+      <div>
+        <button id="show-history"
+          class="border-2 text-[#565654] border-[#65654] text-xl font-bold rounded py-2 px-4"
+        >
+          History
+        </button>
+      </div>
+    </div>
     </header>
-
     <!--main section cond  -->
     <main class="my-20 container mx-auto px-8">
-      <div class="flex justify-center gap-4 mb-10">
-        <div>
-          <button
-            class="bg-[#b4f461] text-xl text-black font-bold rounded py-2 px-4"
-          >
-            Donation
-          </button>
-        </div>
-        <div>
-          <button
-            class="border-2 text-[#565654] border-[#65654] text-xl font-bold rounded py-2 px-4"
-          >
-            History
-          </button>
-        </div>
-      </div>
-      
-      <section class="flex flex-col items-center justify-center gap-8 rounded">
+      <section id="donation-section" class="flex flex-col items-center justify-center gap-8 rounded">
+        <!-- 1st card -->
         <div class="flex items-center gap-6 shadow-lg p-4 border">
-            <div>
-              <img class="w-full mx-auto" src="./assets/noakhali.png" width="522px" alt="" />
-            </div>
+          
+          <img class="mx-auto" style="width: 522px;" src="./assets/noakhali.png" alt="" />
+           
             <div class="space-y-3">
               <button
                 class="py-2 px-3 rounded bg-[#f3f3f3] font-bold text-[#565654] flex items-center gap-2">
                 <img src="./assets/coin.png" alt="">
-                <span>0 BDT</span>
+                <span id="current-donation">100.00 BDT</span>
               </button>
               <h4 class="text-xl font-bold">
                 Donate for Flood at Noakhali, Bangladesh
@@ -77,14 +79,13 @@
                 relief efforts and making a positive impact on the lives of those in
                 need.
               </p>
-              <input class="rounded w-full py-2 px-4 border-2" placeholder="Write Donation Amount"  type="text">
-              <button class="bg-[#b4f461] w-full text-xl text-black font-bold rounded py-2 px-4">Donated</button>
+              <input id="donation-input" class="rounded w-full py-2 px-4 border-2" placeholder="Write Donation Amount"  type="text">
+              <button id="donate-now" class="bg-[#b4f461] w-full text-xl text-black font-bold rounded py-2 px-4">Donated</button>
             </div>
           </div>
+        <!-- 2nd card -->
           <div class="flex items-center gap-6 shadow-lg p-4 rounded border">
-            <div>
-              <img class="w-full mx-auto" src="./assets/feni.png" width="522px" alt="" />
-            </div>
+              <img class="mx-auto" style="width: 522px;" src="./assets/feni.png" alt="" />
             <div class="space-y-3">
               <button
                 class="py-2 px-3 rounded bg-[#f3f3f3] font-bold text-[#565654] flex items-center gap-2 ">
@@ -106,10 +107,9 @@
               <button class="bg-[#b4f461] w-full text-xl text-black font-bold rounded py-2 px-4">Donated</button>
             </div>
           </div>
+        <!-- 3rd card -->
           <div class="flex items-center gap-6 shadow-lg p-4 rounded border">
-            <div>
-              <img class="w-full mx-auto" src="./assets/quota-protest.png" width="522px" alt="" />
-            </div>
+            <img class="mx-auto" style="width: 522px;" src="./assets/quota-protest.png" alt="" />
             <div class="space-y-3">
               <button
                 class="py-2 px-3 rounded bg-[#f3f3f3] font-bold text-[#565654] flex items-center gap-2">
@@ -134,18 +134,15 @@
       </section>
      
       <!-- history section code -->
-       <section class="mt-20 flex flex-col gap-6">
-        <div class="shadow-xl rounded border-2 p-6">
-            <h3 class="text-xl font-bold my-4">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h3>
-            <p>Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
-        </div>
-        <div class="shadow-xl rounded border-2 p-6">
-            <h3 class="text-xl font-bold my-4">6500 Taka is Donated for Flood Relief in Feni,Bangladesh</h3>
-            <p>Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
-        </div>
-        <div class="shadow-xl rounded border-2 p-6">
-            <h3 class="text-xl font-bold my-4">15500 Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h3>
-            <p>Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
+       <section id="history-section" class="space-y-6 hidden">
+        <h3
+        class="text-2xl font-semibold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+      >
+        Expense History
+      </h3>
+        <div id="history-list" class="">
+            <!-- <h3 class="text-xl font-bold my-4">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h3>
+            <p>Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p> -->
         </div>
        </section>
     </main>
