@@ -20,6 +20,7 @@ document.getElementById('donate-btn').addEventListener('click', function(){
     document.getElementById('account-balance').textContent = newCash.toFixed(2);
     document.getElementById('account-Cash').innerText = newDonationTotalAmount.toFixed(2);
 
+    
     // history add 
     const now = new Date(); 
      // Format the date to include the day of the week and the date
@@ -30,7 +31,7 @@ document.getElementById('donate-btn').addEventListener('click', function(){
         day: 'numeric'
     });
 
- // Format the time to include hours, minutes, seconds, and time zone
+ // Format the time to include hours, minutes, seconds, and time zone.
     const formattedTime = now.toLocaleTimeString('en-BD', {
         hour: '2-digit',
         minute: '2-digit',

@@ -60,7 +60,7 @@ showHistory.addEventListener('click', function(){
     );
     showDonation.classList.remove(
         "text-black",
-        "bg-[#b4f461]" 
+        "bg-[#b4f461]"
     );
     document.getElementById("donation-section").classList.add("hidden");
     document.getElementById("history-section").classList.remove("hidden");
