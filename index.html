@@ -49,13 +49,30 @@
     </header>
 
    
-    <!-- Main Section -->
-    <main class="my-10 container mx-auto lg:pt-9 px-4">
+    <!-- Main Section code-->
+    <main class="my-10 container mx-auto px-4">
+
+      <!-- modal section code -->
+       <div class="hidden">  
+        <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+        <dialog id="my_modal_1" class="modal">
+        <div class="modal-box">
+          <h1 class="text4xl font-bold">Congrates!</h1>
+          <img src="./assets/coin.png" alt="">
+          <p class="py-4">You Have Donated for Humankind</p>
+          <h4 class="text-lg font-bold">Successfully</h4>
+        <div class="modal-action">
+          <form method="dialog">
+            <button class="btn">Close</button>
+         </form>
+         </div>
+         </div>
+       </dialog>
+      </div>
       <section id="donation-section" class="space-y-8">
         <!-- 1st Card -->
         <div class="lg:flex items-center gap-6 shadow-lg p-4 border rounded">
           <img class="mx-auto w-full lg:w-1/2" src="./assets/noakhali.png" alt="Flood Noakhali" />
-          <!-- <img class="mx-auto" style="width: 522px;" src="./assets/noakhali.png" alt="" /> -->
           <div class="space-y-3 lg:w-1/2">
             <button class="py-2 px-3 rounded bg-[#f3f3f3] font-bold text-[#565654] flex items-center gap-2">
               <img src="./assets/coin.png" alt="Coin" class="w-6 h-6" />
@@ -69,8 +86,7 @@
                those affected by natural disasters. Floods in Noakhali have caused significant damage to homes and 
                infrastructure, leaving many families in need of essential supplies such as food, clean water, medical aid, and shelter.
               The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will 
-
-            </p>
+             </p>
             <input id="donation-input" class="rounded w-full py-2 px-4 border-2" placeholder="Write Donation Amount" type="text" />
             <button id="donate-now" class="bg-[#b4f461] w-full text-md md:text-xl text-black font-bold rounded py-2 px-4">
               Donate Now
