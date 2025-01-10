@@ -25,7 +25,7 @@ document.getElementById("donate-btn").addEventListener("click", function () {
   const historyList = document.createElement("div");
   historyList.className = "bg-white shadow-xl rounded border-2 p-6 mb-6";
   historyList.innerHTML = `
-     <h3 class="text-xl font-bold my-4">${donatedInputType} 6500 Taka is Donated for Flood Relief in Feni,Bangladesh</h3>
+     <h3 class="text-xl font-bold my-4">${donatedInputType}Taka is Donated for Flood Relief in Feni,Bangladesh</h3>
      <p class="text-lg text-black">Date: ${date}</p>
      `;
   document.getElementById("history-list").appendChild(historyList);
